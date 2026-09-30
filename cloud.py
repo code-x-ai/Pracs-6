@@ -20,6 +20,7 @@ def round_robin():
         st = load[j] / vms[j]["mips"]
         et = t["length"] / vms[j]["mips"]
         res.append([t["name"], vms[j]["name"], round(st,2), round(et,2), round(st+et,2)])
+        # pip install tabulate
         load[j] += t["length"]
     return res
 
